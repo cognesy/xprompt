@@ -1,0 +1,18 @@
+[project]
+name = "xprompt"
+version = "0.1.0"
+description = "Prompts-as-code micro-library. Classes, composition, variants, templates."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "jinja2>=3.1",
+    "python-frontmatter>=1.0",
+]
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
