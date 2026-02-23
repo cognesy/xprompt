@@ -93,6 +93,18 @@ prompt = registry.get("reviewer.analyze")
 text = prompt.render(content=doc, criteria_text=criteria)
 ```
 
+### 5. Optional autodiscovery addon
+
+```python
+from xprompt import PromptRegistry
+from xprompt.addons.discovery import register_discovered
+
+registry = PromptRegistry(overrides=config.get("prompts", {}))
+register_discovered(registry, packages=["myapp"])  # opt-in
+```
+
+Discovery is optional. If you do not call it, registration stays fully manual.
+
 
 ## Inline body (no .md file)
 
